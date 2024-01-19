@@ -1,3 +1,32 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  body {
+      background-color: #f8fafc;
+      font-family: 'Open Sans Variable', sans-serif;
+  }
+}
+
+
+.tours {
+    padding: 2rem 0;
+    display: grid;
+    gap: 2rem;
+}
+
+@media screen and (min-width: 768px) {
+    .tours {
+      grid-template-columns: 1fr 1fr;
+      /* fix stretch */
+      align-items: start;
+    }
+  }
+  @media screen and (min-width: 992px) {
+    .tours {
+      grid-template-columns: 1fr 1fr 1fr;
+      /* fix stretch */
+      align-items: start;
+    }
+  }
