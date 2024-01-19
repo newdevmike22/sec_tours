@@ -1,4 +1,4 @@
-const Tour = ({ id, name, team, info, image, price }) => {
+const Tour = ({ id, name, team, info, image, price, removeTour }) => {
     return (
         <article className="bg-white rounded-md shadow-md relative transition-all duration-300 ease-in-out h-full">
             <img className="w-[100%] block object-cover h-[20rem] rounded-tr-lg rounded-tl-lg" src={image} alt={name} />
@@ -7,6 +7,13 @@ const Tour = ({ id, name, team, info, image, price }) => {
                 <h1 className="text-center mb-[1.25rem] text-[1.5rem] font-semibold">{name}</h1>
                 <h3 className="mb-2 uppercase font-semibold text-base text-[#0c11a6]">Team: {team}</h3>
                 <p className="mb-[1.25rem] text-[#64748b]">{info}</p>
+                <button 
+                    type="button" 
+                    className="delete-btn btn-block btn"
+                    onClick={() => removeTour(id)}
+                >
+                    not interested
+                </button>
             </div>
         </article>
     )
