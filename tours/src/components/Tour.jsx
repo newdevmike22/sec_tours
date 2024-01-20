@@ -5,7 +5,11 @@ const Tour = ({ id, name, team, info, image, price, removeTour }) => {
 
     return (
         <article className="bg-white rounded-md shadow-md relative transition-all duration-300 ease-in-out h-full">
-            <img className="w-[100%] block object-cover h-[20rem] rounded-tr-lg rounded-tl-lg" src={image} alt={name} />
+            <img 
+                className="w-[100%] block object-cover h-[20rem] rounded-tr-lg rounded-tl-lg
+                transform hover:scale-110 transition-transform duration-300 cursor-pointer" 
+                src={image} alt={name} 
+            />
             <span className="absolute top-0 right-0 p-2 text-white bg-[#bd020e] tracking-wide rounded-tr-[0.25rem] font-bold">${price}</span>
             <div className="py-[2rem] px-[1.5rem]">
                 <h1 className="text-center mb-[1.25rem] text-[1.5rem] font-semibold">{name}</h1>
